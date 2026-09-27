@@ -50,7 +50,7 @@
             Viewbutton.Name = "Viewbutton";
             Viewbutton.Size = new System.Drawing.Size(75, 25);
             Viewbutton.TabIndex = 1;
-            Viewbutton.Text = "Edit";
+            Viewbutton.Text = "编辑";
             Viewbutton.UseVisualStyleBackColor = true;
             Viewbutton.Click += Viewbutton_Click;
             // 
@@ -61,7 +61,7 @@
             ScriptBrowse.Name = "ScriptBrowse";
             ScriptBrowse.Size = new System.Drawing.Size(75, 25);
             ScriptBrowse.TabIndex = 2;
-            ScriptBrowse.Text = "Browse";
+            ScriptBrowse.Text = "浏览";
             ScriptBrowse.UseVisualStyleBackColor = true;
             ScriptBrowse.Click += ScriptBrowse_Click;
             // 
