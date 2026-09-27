@@ -472,7 +472,7 @@ namespace ScriptUI
                 catch (Exception ex)
                 {
                     MessageBox.Show(
-                        $"Failed to open help file: {ex.Message}\n\nFile: {helpFile}",
+                        $"无法打开帮助文件：{ex.Message}\n\n文件：{helpFile}",
                         _toolTitle,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
@@ -484,7 +484,7 @@ namespace ScriptUI
                 string strFolder =
                   System.IO.Path.GetDirectoryName(exePath);
                 _ = MessageBox.Show(
-                  "ReadMe.txt file not found at location " + strFolder,
+                  "在以下位置未找到帮助文件：" + strFolder,
                   _toolTitle
                 );
             }
@@ -503,7 +503,7 @@ namespace ScriptUI
                 {
                     result =
                       (MessageBoxResult)MessageBox.Show(
-                        "Drawing list is modified. Do you want to save?",
+                        "图纸列表已修改，是否保存？",
                         _toolTitle, (MessageBoxButtons)MessageBoxButton.YesNoCancel
                       );
 
