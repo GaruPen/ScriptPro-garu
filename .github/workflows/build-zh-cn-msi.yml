@@ -1,0 +1,38 @@
+name: Build zh-CN MSI
+
+on:
+  push:
+    branches:
+      - feat/zh-cn-ui-20260927
+    paths:
+      - '.github/workflows/build-zh-cn-msi.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build localized MSI
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build MSI installer
+        shell: pwsh
+        run: .\Build.ps1 -Setup
+
+      - name: Upload MSI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ScriptPro-zh-CN-MSI
+          path: Release\ScriptProSetup.msi
+          if-no-files-found: error
