@@ -1,6 +1,7 @@
 name: Build and Release MSI
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
