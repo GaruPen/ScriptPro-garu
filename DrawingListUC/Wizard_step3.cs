@@ -134,7 +134,7 @@ namespace DrawingListUC
             {
                 OpenFileDialog FileOpenDlg = new OpenFileDialog
                 {
-                    Filter = "AutoCAD application (*.exe) |*.exe;"
+                    Filter = "AutoCAD 应用程序 (*.exe)|*.exe;"
                 };
                 if (FileOpenDlg.ShowDialog() == DialogResult.OK)
                 {
