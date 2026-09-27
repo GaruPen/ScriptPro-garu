@@ -198,14 +198,14 @@ namespace DrawingListUC
       {
         if (Convert.ToInt32(this.textSeconds.Text) < 10)
         {
-          MessageBox.Show("Timeout should be at least 10 seconds");
+          MessageBox.Show("处理超时不能小于 10 秒");
           return;
         }
       }
       catch
       {
         MessageBox.Show(
-          "Specific valid publish timeout in seconds"
+          "请输入有效的处理超时秒数"
         );
         textSeconds.Focus();
         return;
@@ -216,7 +216,7 @@ namespace DrawingListUC
         if (Convert.ToInt32(this.restartAcad.Text) <= 0)
         {
           MessageBox.Show(
-            "Restart AutoCAD value should be more then 0"
+            "AutoCAD 重启间隔必须大于 0"
           );
           return;
         }
@@ -224,7 +224,7 @@ namespace DrawingListUC
       catch
       {
         MessageBox.Show(
-          "Specific valid AutoCAD restart value"
+          "请输入有效的 AutoCAD 重启间隔"
         );
         restartAcad.Focus();
         return;
@@ -235,7 +235,7 @@ namespace DrawingListUC
         if (!System.IO.File.Exists(ScriptPath.Text))
         {
           MessageBox.Show(
-            "Specific valid Start up script file"
+            "请选择有效的启动脚本文件"
           );
 
           IniScriptBrowse.Focus();
@@ -255,7 +255,7 @@ namespace DrawingListUC
         }
         catch
         {
-          MessageBox.Show("Specific valid log file folder value");
+          MessageBox.Show("请选择有效的日志文件夹");
           ProcessLogFilePath.Focus();
           ProcessLogFilePath.Text = Path.GetTempPath();
           return;
@@ -267,7 +267,7 @@ namespace DrawingListUC
           if (!System.IO.File.Exists(textBox_exePath.Text))
           {
               MessageBox.Show(
-                "Specific valid AutoCAD application"
+                "请选择有效的 AutoCAD 应用程序"
               );
 
               textBox_exePath.Focus();
@@ -305,7 +305,7 @@ namespace DrawingListUC
           if (showError)
           {
               MessageBox.Show(
-                    "Specific valid AutoCAD/Console application"
+                    "请选择有效的 AutoCAD/Console 应用程序"
                   );
 
               textBox_exePath.Focus();
@@ -364,7 +364,7 @@ namespace DrawingListUC
           FileOpenDlg.InitialDirectory =
             Path.GetDirectoryName(_iniScript);
 
-        FileOpenDlg.Filter = "Script (*.scr) |*.scr;";
+        FileOpenDlg.Filter = "脚本文件 (*.scr)|*.scr;";
         if (FileOpenDlg.ShowDialog() == DialogResult.OK)
           IniScript = FileOpenDlg.FileName;
       }
@@ -463,7 +463,7 @@ namespace DrawingListUC
         }
         catch
         {
-          MessageBox.Show("Unable to create the log file");
+          MessageBox.Show("无法创建日志文件");
           ProcessLogFilePath.Text = "";
         }
       }
@@ -479,7 +479,7 @@ namespace DrawingListUC
                 FileOpenDlg.InitialDirectory =
                   Path.GetDirectoryName(_acadExePath);
             
-            FileOpenDlg.Filter = "AutoCAD application (*.exe) |*.exe;";
+            FileOpenDlg.Filter = "AutoCAD 应用程序 (*.exe)|*.exe;";
             if (FileOpenDlg.ShowDialog() == DialogResult.OK)
             {
                 acadExePath = FileOpenDlg.FileName;

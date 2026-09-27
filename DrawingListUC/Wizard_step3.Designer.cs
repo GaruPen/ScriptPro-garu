@@ -42,7 +42,7 @@
             this.button_exePath.Name = "button_exePath";
             this.button_exePath.Size = new System.Drawing.Size(67, 24);
             this.button_exePath.TabIndex = 1;
-            this.button_exePath.Text = "Browse";
+            this.button_exePath.Text = "浏览";
             this.button_exePath.UseVisualStyleBackColor = true;
             this.button_exePath.Click += new System.EventHandler(this.button_exePath_Click);
             // 
@@ -79,12 +79,12 @@
             // 
             // Productcolumn
             // 
-            this.Productcolumn.Text = "Product";
+            this.Productcolumn.Text = "产品";
             this.Productcolumn.Width = 77;
             // 
             // ExePath
             // 
-            this.ExePath.Text = "Path";
+            this.ExePath.Text = "路径";
             this.ExePath.Width = 378;
             // 
             // Wizard_step3

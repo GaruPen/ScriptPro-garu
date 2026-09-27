@@ -12,7 +12,7 @@
     Closing="RibbonWindow_Closing"
     Icon="/Images/ScriptPro3.ico"
     Loaded="RibbonWindow_Loaded"
-    Title="Script Pro 3.0">
+    Title="Script Pro 3.0 - 批处理工具">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -26,38 +26,38 @@
             </Ribbon.ApplicationMenu>
 
             <RibbonTab x:Name="ManageTab" Header="ScriptPro">
-                <RibbonGroup MinWidth="300" Header="List" Width="277">
-                    <RibbonButton x:Name="NewList" Click="NewList_Click" Label="New" LargeImageSource="Images/script-new.png" />
-                    <RibbonButton x:Name="WizardList" Click="WizardList_Click" Label="Wizard" LargeImageSource="Images/magic_wand_2.png" />
-                    <RibbonButton x:Name="LoadList" Click="LoadList_Click" Label="Load" LargeImageSource="Images/script-add.png" />
-                    <RibbonButton x:Name="SaveList" Click="SaveList_Click" Label="Save" LargeImageSource="Images/script-save.png" />
-                    <RibbonButton x:Name="SaveAsList" Click="SaveAsList_Click" Label="Save As" LargeImageSource="Images/script-save.png" />
-                    <RibbonButton x:Name="LoadSCP" Click="LoadSCP_Click" Label="Load SCP Project" LargeImageSource="Images/table_add.png" />
+                <RibbonGroup MinWidth="300" Header="列表" Width="277">
+                    <RibbonButton x:Name="NewList" Click="NewList_Click" Label="新建" LargeImageSource="Images/script-new.png" />
+                    <RibbonButton x:Name="WizardList" Click="WizardList_Click" Label="向导" LargeImageSource="Images/magic_wand_2.png" />
+                    <RibbonButton x:Name="LoadList" Click="LoadList_Click" Label="加载" LargeImageSource="Images/script-add.png" />
+                    <RibbonButton x:Name="SaveList" Click="SaveList_Click" Label="保存" LargeImageSource="Images/script-save.png" />
+                    <RibbonButton x:Name="SaveAsList" Click="SaveAsList_Click" Label="另存为" LargeImageSource="Images/script-save.png" />
+                    <RibbonButton x:Name="LoadSCP" Click="LoadSCP_Click" Label="加载 SCP 项目" LargeImageSource="Images/table_add.png" />
                 </RibbonGroup>
 
-                <RibbonGroup MinWidth="260" Header="Drawing files">
-                    <RibbonButton x:Name="AddDWGFile" Click="AddDWGFile_Click" Label="Add" LargeImageSource="Images/add.png" />
-                    <RibbonButton x:Name="AddDWGFolder" Click="AddDWGFolder_Click" Label="Add From Folder" LargeImageSource="Images/folder_add.png" />
-                    <RibbonButton x:Name="RemoveDWG" Click="RemoveDWG_Click" Label="Remove" LargeImageSource="Images/delete.png" />
-                    <RibbonButton x:Name="SkipDWG" Click="SkipDWG_Click" Label="Check/Uncheck" LargeImageSource="Images/checked-unchecked.png" />
+                <RibbonGroup MinWidth="260" Header="图纸文件">
+                    <RibbonButton x:Name="AddDWGFile" Click="AddDWGFile_Click" Label="添加文件" LargeImageSource="Images/add.png" />
+                    <RibbonButton x:Name="AddDWGFolder" Click="AddDWGFolder_Click" Label="添加文件夹" LargeImageSource="Images/folder_add.png" />
+                    <RibbonButton x:Name="RemoveDWG" Click="RemoveDWG_Click" Label="移除" LargeImageSource="Images/delete.png" />
+                    <RibbonButton x:Name="SkipDWG" Click="SkipDWG_Click" Label="勾选/取消" LargeImageSource="Images/checked-unchecked.png" />
                 </RibbonGroup>
 
-                <RibbonGroup MinWidth="160" Header="Run">
-                    <RibbonButton x:Name="RunChecked" Click="RunChecked_Click" Label="Checked" LargeImageSource="Images/script-go-checked.png" />
-                    <RibbonButton x:Name="RunSelected" Click="RunSelected_Click" Label="Selected" LargeImageSource="Images/script-go-selected.png" />
-                    <RibbonButton x:Name="RunFailed" Click="RunFailed_Click" Label="Failed" LargeImageSource="Images/script-go-failed.png" />
+                <RibbonGroup MinWidth="160" Header="执行">
+                    <RibbonButton x:Name="RunChecked" Click="RunChecked_Click" Label="执行勾选项" LargeImageSource="Images/script-go-checked.png" />
+                    <RibbonButton x:Name="RunSelected" Click="RunSelected_Click" Label="执行选中项" LargeImageSource="Images/script-go-selected.png" />
+                    <RibbonButton x:Name="RunFailed" Click="RunFailed_Click" Label="重试失败项" LargeImageSource="Images/script-go-failed.png" />
                 </RibbonGroup>
 
-                <RibbonGroup MinWidth="60" Header="Stop">
-                    <RibbonButton x:Name="StopProcess" Click="StopProcess_Click" Label="Stop" LargeImageSource="Images/stop.png" />
+                <RibbonGroup MinWidth="60" Header="停止">
+                    <RibbonButton x:Name="StopProcess" Click="StopProcess_Click" Label="停止" LargeImageSource="Images/stop.png" />
                 </RibbonGroup>
 
-                <RibbonGroup MinWidth="60" Header="Options">
-                    <RibbonButton x:Name="ProcessOptions" Click="ProcessOptions_Click" Label="Settings" LargeImageSource="Images/wrench.png" />
+                <RibbonGroup MinWidth="60" Header="选项">
+                    <RibbonButton x:Name="ProcessOptions" Click="ProcessOptions_Click" Label="设置" LargeImageSource="Images/wrench.png" />
                 </RibbonGroup>
 
-                <RibbonGroup MinWidth="60" Header="Help">
-                    <RibbonButton x:Name="ProcessHelp" Click="ProcessHelp_Click" Label="Help" LargeImageSource="Images/help.png" />
+                <RibbonGroup MinWidth="60" Header="帮助">
+                    <RibbonButton x:Name="ProcessHelp" Click="ProcessHelp_Click" Label="帮助" LargeImageSource="Images/help.png" />
                 </RibbonGroup>
             </RibbonTab>
         </Ribbon>

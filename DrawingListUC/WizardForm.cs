@@ -54,7 +54,7 @@ namespace DrawingListUC
 
             if (scriptPath.Length == 0)
             {
-                MessageBox.Show("Please specify a valid script file.");
+                MessageBox.Show("请指定有效的脚本文件。");
                 return;
             }
 
@@ -62,7 +62,7 @@ namespace DrawingListUC
             {
                 if (!File.Exists(acadPath))
                 {
-                    MessageBox.Show("AutoCAD application does not exits");
+                    MessageBox.Show("AutoCAD 应用程序不存在。");
                     return;
                 }
             }
@@ -82,7 +82,7 @@ namespace DrawingListUC
 
             if (scriptPath.Length == 0)
             {
-                MessageBox.Show("Please specify a valid script file.");
+                MessageBox.Show("请指定有效的脚本文件。");
                 return;
             }
 
@@ -90,7 +90,7 @@ namespace DrawingListUC
             {
                 if (!File.Exists(acadPath))
                 {
-                    MessageBox.Show("AutoCAD application does not exits");
+                    MessageBox.Show("AutoCAD 应用程序不存在。");
                     return;
                 }
             }
@@ -101,7 +101,7 @@ namespace DrawingListUC
 
             if (dwgList.Count == 0)
             {
-                MessageBox.Show("No drawing is selected");
+                MessageBox.Show("未选择任何图纸。");
                 return;
             }
 

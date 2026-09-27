@@ -62,7 +62,7 @@
             StartScriptPro.Name = "StartScriptPro";
             StartScriptPro.Size = new System.Drawing.Size(170, 28);
             StartScriptPro.TabIndex = 23;
-            StartScriptPro.Text = "Finish && Start ScriptPro";
+            StartScriptPro.Text = "完成并启动 ScriptPro";
             StartScriptPro.UseVisualStyleBackColor = true;
             StartScriptPro.Click += StartScriptPro_Click;
             // 
@@ -73,7 +73,7 @@
             Finish_Button.Name = "Finish_Button";
             Finish_Button.Size = new System.Drawing.Size(82, 28);
             Finish_Button.TabIndex = 22;
-            Finish_Button.Text = "Finish";
+            Finish_Button.Text = "完成";
             Finish_Button.UseVisualStyleBackColor = true;
             Finish_Button.Click += Finish_Button_Click;
             // 
@@ -84,7 +84,7 @@
             Cancel_button.Name = "Cancel_button";
             Cancel_button.Size = new System.Drawing.Size(80, 28);
             Cancel_button.TabIndex = 21;
-            Cancel_button.Text = "Cancel";
+            Cancel_button.Text = "取消";
             Cancel_button.UseVisualStyleBackColor = true;
             Cancel_button.Click += Cancel_button_Click;
             // 
@@ -98,7 +98,7 @@
             label1_step1.Name = "label1_step1";
             label1_step1.Size = new System.Drawing.Size(170, 13);
             label1_step1.TabIndex = 24;
-            label1_step1.Text = "Step 1 : Select the script file";
+            label1_step1.Text = "步骤 1：选择脚本文件";
             label1_step1.Click += label1_step1_Click;
             // 
             // Step2_panel
@@ -119,7 +119,7 @@
             label_step2.Name = "label_step2";
             label_step2.Size = new System.Drawing.Size(153, 13);
             label_step2.TabIndex = 25;
-            label_step2.Text = "Step 2 : Add drawing files";
+            label_step2.Text = "步骤 2：添加图纸文件";
             // 
             // label_step3
             // 
@@ -131,7 +131,7 @@
             label_step3.Name = "label_step3";
             label_step3.Size = new System.Drawing.Size(226, 13);
             label_step3.TabIndex = 26;
-            label_step3.Text = "Step 3 : Select the Application version";
+            label_step3.Text = "步骤 3：选择应用程序版本";
             // 
             // WizardForm
             // 
@@ -154,7 +154,7 @@
             Name = "WizardForm";
             SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Wizard : 3 simple steps";
+            Text = "ScriptPro 向导：3 个步骤";
             Load += WizardForm_Load;
             ResumeLayout(false);
             PerformLayout();

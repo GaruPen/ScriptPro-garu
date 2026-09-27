@@ -26,7 +26,7 @@ namespace DrawingListUC
         {
             try{
                 OpenFileDialog BPFileOpenDlg = new OpenFileDialog();
-                BPFileOpenDlg.Filter = "Script (*.scr) |*.scr;";
+                BPFileOpenDlg.Filter = "脚本文件 (*.scr)|*.scr;";
 
                 if (BPFileOpenDlg.ShowDialog() == DialogResult.OK)
                 {

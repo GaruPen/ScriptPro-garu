@@ -133,7 +133,7 @@ namespace DrawingListUC
         // Const strings and ints
         const string dwgExt = "dwg";
         const string dxfExt = "dxf";
-        const string currentDwg = "Current drawing is : ";
+        const string currentDwg = "当前图纸：";
 
         const string keyFolderName = "<acet:cFolderName>";
         const string keyBaseName = "<acet:cBaseName>";
@@ -296,10 +296,10 @@ namespace DrawingListUC
                 else
                 {
                     MessageBox.Show(
-                        $"Could not find project file:\n{strBPLname}\n\n" +
-                        $"Command line: {command}\n\n" +
-                        $"Parsed file: '{strBPLname}'",
-                        "ScriptPro - File Not Found",
+                        $"找不到项目文件：\n{strBPLname}\n\n" +
+                        $"命令行：{command}\n\n" +
+                        $"解析后的项目文件：'{strBPLname}'",
+                        "ScriptPro - 文件未找到",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
                     );
@@ -390,9 +390,9 @@ namespace DrawingListUC
         {
             OpenFileDialog BPFileOpenDlg =
               new OpenFileDialog();
-            BPFileOpenDlg.Filter = "Drawing Files (*.dwg, *.dxf)|*.dwg;*.dxf";
+            BPFileOpenDlg.Filter = "图纸文件 (*.dwg, *.dxf)|*.dwg;*.dxf";
             BPFileOpenDlg.Multiselect = true;
-            BPFileOpenDlg.Title = "Select files to add";
+            BPFileOpenDlg.Title = "选择要添加的图纸文件";
 
             if (BPFileOpenDlg.ShowDialog() == DialogResult.OK)
             {
@@ -518,9 +518,9 @@ namespace DrawingListUC
                     if (firstItem != null)
                     {
                         if (firstItem.Checked)
-                            DwgContextMenu.Items[2].Text = "Skip";
+                            DwgContextMenu.Items[2].Text = "跳过";
                         else
-                            DwgContextMenu.Items[2].Text = "Include";
+                            DwgContextMenu.Items[2].Text = "包含";
                     }
                 }
 
@@ -558,7 +558,7 @@ namespace DrawingListUC
         private void ScriptBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog BPFileOpenDlg = new OpenFileDialog();
-            BPFileOpenDlg.Filter = "Script (*.scr) |*.scr;";
+            BPFileOpenDlg.Filter = "脚本文件 (*.scr)|*.scr;";
             if (BPFileOpenDlg.ShowDialog() == DialogResult.OK)
             {
                 _scriptPath = BPFileOpenDlg.FileName;
@@ -798,9 +798,9 @@ namespace DrawingListUC
 
             OpenFileDialog openDlg = new OpenFileDialog();
             openDlg.Filter =
-              "ScriptPro project files (*.scp) |*.scp;";
+              "ScriptPro 项目文件 (*.scp)|*.scp;";
             openDlg.Title =
-              "Load ScriptPro project files";
+              "加载 ScriptPro 项目文件";
 
             if (openDlg.ShowDialog() == DialogResult.OK)
             {
@@ -928,8 +928,8 @@ namespace DrawingListUC
         {
             // Clear the drawing list first...
             OpenFileDialog openDlg = new OpenFileDialog();
-            openDlg.Filter = "Drawing list (*.bpl) |*.bpl;";
-            openDlg.Title = "Drawing list";
+            openDlg.Filter = "图纸列表 (*.bpl)|*.bpl;";
+            openDlg.Title = "图纸列表";
 
             if (File.Exists(_projectName))
                 openDlg.InitialDirectory = Path.GetDirectoryName(_projectName);
@@ -1021,8 +1021,8 @@ namespace DrawingListUC
             if (showDialog)
             {
                 SaveFileDialog saveDlg = new SaveFileDialog();
-                saveDlg.Filter = "Drawing list (*.bpl) |*.bpl;";
-                saveDlg.Title = "Drawing list";
+                saveDlg.Filter = "图纸列表 (*.bpl)|*.bpl;";
+                saveDlg.Title = "图纸列表";
                 saveDlg.OverwritePrompt = true;
 
                 if (saveDlg.ShowDialog() == DialogResult.OK)
@@ -1083,7 +1083,7 @@ namespace DrawingListUC
             if (DwgList.SelectedItems.Count == 0)
             {
                 MessageBox.Show(
-                          "Try after selecting the required files",
+                          "请先选择需要处理的图纸。",
                           "ScriptPro", MessageBoxButtons.OK
                         );
 
@@ -1148,7 +1148,7 @@ namespace DrawingListUC
             else
             {
                 MessageBox.Show(
-                "No failed files",
+                "没有失败的图纸。",
                 "ScriptPro", MessageBoxButtons.OK
               );
             }
@@ -1375,14 +1375,14 @@ namespace DrawingListUC
                                 if (!isRestart)
                                 {
                                     MessageBox.Show(
-                                        $"{productName} is already running (PID: {existing.Item1}).\n\n" +
-                                        "ScriptPro will use the existing instance.\n\n" +
-                                        "⚠️ IMPORTANT:\n" +
-                                        "• AutoCAD will NOT be closed or restarted automatically\n" +
-                                        "• The restart counter (if configured) will NOT apply\n" +
-                                        "• For large batches, let ScriptPro launch AutoCAD instead\n\n" +
-                                        "AutoCAD will remain running after ScriptPro finishes.",
-                                        "ScriptPro - Using Existing AutoCAD",
+                                        $"{productName} 已在运行（PID：{existing.Item1}）。\n\n" +
+                                        "ScriptPro 将使用当前已运行的实例。\n\n" +
+                                        "⚠️ 注意：\n" +
+                                        "• ScriptPro 不会自动关闭或重启当前 AutoCAD\n" +
+                                        "• 已设置的自动重启计数不会生效\n" +
+                                        "• 大批量处理时，建议由 ScriptPro 启动 AutoCAD\n\n" +
+                                        "ScriptPro 完成后，AutoCAD 将继续保持运行。",
+                                        "ScriptPro - 使用已运行的 AutoCAD",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning
                                     );
@@ -1472,13 +1472,13 @@ namespace DrawingListUC
                         if (!isRestart)
                         {
                             MessageBox.Show(
-                                "ScriptPro will use the existing AutoCAD instance.\n\n" +
-                                "⚠️ IMPORTANT:\n" +
-                                "• AutoCAD will NOT be closed or restarted automatically\n" +
-                                "• The restart counter (if configured) will NOT apply\n" +
-                                "• For large batches, let ScriptPro launch AutoCAD instead\n\n" +
-                                "AutoCAD will remain running after ScriptPro finishes.",
-                                "ScriptPro - Using Existing AutoCAD",
+                                "ScriptPro 将使用当前已运行的 AutoCAD 实例。\n\n" +
+                                "⚠️ 注意：\n" +
+                                "• ScriptPro 不会自动关闭或重启当前 AutoCAD\n" +
+                                "• 已设置的自动重启计数不会生效\n" +
+                                "• 大批量处理时，建议由 ScriptPro 启动 AutoCAD\n\n" +
+                                "ScriptPro 完成后，AutoCAD 将继续保持运行。",
+                                "ScriptPro - 使用已运行的 AutoCAD",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning
                             );
@@ -1517,12 +1517,12 @@ namespace DrawingListUC
                 string msg = ex.InnerException?.Message ?? ex.Message;
 
                 MessageBox.Show(
-                    $"Failed to start/attach AutoCAD.\n\nError: {msg}\n\n" +
-                    "Please verify:\n" +
-                    "1) Your app runs as x64\n" +
-                    "2) AutoCAD is installed & licensed\n" +
-                    "3) Run with same elevation as AutoCAD (admin vs non-admin)",
-                    "ScriptPro - AutoCAD COM",
+                    $"无法启动或连接 AutoCAD。\n\n错误：{msg}\n\n" +
+                    "请检查：\n" +
+                    "1) 当前程序以 x64 运行\n" +
+                    "2) AutoCAD 已正确安装并授权\n" +
+                    "3) ScriptPro 与 AutoCAD 使用相同权限级别运行（管理员/非管理员）",
+                    "ScriptPro - AutoCAD COM 连接",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
@@ -1829,7 +1829,7 @@ namespace DrawingListUC
             if (!File.Exists(ScriptPath.Text))
             {
                 MessageBox.Show(
-                  "Please specify a valid script file."
+                  "请指定有效的脚本文件。"
                 );
 
                 ScriptPath.Focus();
@@ -1856,7 +1856,7 @@ namespace DrawingListUC
                 // Start the AutoCAD (pass restarted flag to suppress dialogs on restart)
                 if (!startAutoCAD(restarted))
                 {
-                    MessageBox.Show("Unable to start AutoCAD");
+                    MessageBox.Show("无法启动 AutoCAD");
 
                     BPbar.Visible = false;
                     label_filename.Visible = false;
@@ -2225,7 +2225,7 @@ namespace DrawingListUC
                 {
                     DialogResult result =
                     MessageBox.Show(
-                      "Do you wish to view the log file?",
+                      "是否查看日志文件？",
                       "ScriptPro", MessageBoxButtons.YesNo
                     );
 
@@ -2816,8 +2816,8 @@ namespace DrawingListUC
                     {
                         // Show the message box and hold the screen...
                         MessageBox.Show(
-                          "Press OK to continue...",
-                          "Diagnostic mode", MessageBoxButtons.OK
+                          "单击“确定”继续...",
+                          "诊断模式", MessageBoxButtons.OK
                         );
                     }
 
@@ -2888,8 +2888,8 @@ namespace DrawingListUC
                     {
                         // Show the message box and hold the screen...
                         MessageBox.Show(
-                          "Press OK to continue...",
-                          "Diagnostic mode", MessageBoxButtons.OK
+                          "单击“确定”继续...",
+                          "诊断模式", MessageBoxButtons.OK
                         );
                     }
 
@@ -3175,13 +3175,13 @@ namespace DrawingListUC
 
                     if (e.ProgressPercentage == CLOSE_DWG_SUCCESS)
                     {
-                        item.SubItems[2].Text = "Done";
+                        item.SubItems[2].Text = "完成";
                         info._status = true;
                         data.status = true;
                     }
                     else if (e.ProgressPercentage == CLOSE_DWG_FAILED)
                     {
-                        item.SubItems[2].Text = "Failed";
+                        item.SubItems[2].Text = "失败";
                         item.ForeColor = Color.Red;
                         info._status = false;
                         data.status = false;
