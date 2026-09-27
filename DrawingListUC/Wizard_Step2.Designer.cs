@@ -56,10 +56,10 @@
             AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             AddButton.Name = "AddButton";
             AddButton.Size = new System.Drawing.Size(77, 77);
-            AddButton.Text = "Add";
+            AddButton.Text = "添加";
             AddButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             AddButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            AddButton.ToolTipText = "Add DWG files";
+            AddButton.ToolTipText = "添加 DWG 文件";
             AddButton.Click += AddButton_Click;
             // 
             // AddFolder
@@ -69,9 +69,9 @@
             AddFolder.ImageTransparentColor = System.Drawing.Color.Magenta;
             AddFolder.Name = "AddFolder";
             AddFolder.Size = new System.Drawing.Size(234, 77);
-            AddFolder.Text = "Add from folder";
+            AddFolder.Text = "从文件夹添加";
             AddFolder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            AddFolder.ToolTipText = "Add from folder";
+            AddFolder.ToolTipText = "从文件夹添加";
             AddFolder.Click += AddFolder_Click;
             // 
             // RemoveButton
@@ -81,7 +81,7 @@
             RemoveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             RemoveButton.Name = "RemoveButton";
             RemoveButton.Size = new System.Drawing.Size(129, 77);
-            RemoveButton.Text = "Remove";
+            RemoveButton.Text = "移除";
             RemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             RemoveButton.Click += RemoveButton_Click;
             // 
