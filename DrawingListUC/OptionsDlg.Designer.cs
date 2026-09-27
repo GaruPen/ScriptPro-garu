@@ -70,7 +70,7 @@
             this.label_timeout.Name = "label_timeout";
             this.label_timeout.Size = new System.Drawing.Size(233, 13);
             this.label_timeout.TabIndex = 0;
-            this.label_timeout.Text = "Process timeout per drawing in seconds ( >= 10)";
+            this.label_timeout.Text = "单张图纸处理超时（秒，≥ 10）";
             // 
             // textSeconds
             // 
@@ -87,7 +87,7 @@
             this.IniViewbutton.Name = "IniViewbutton";
             this.IniViewbutton.Size = new System.Drawing.Size(61, 24);
             this.IniViewbutton.TabIndex = 2;
-            this.IniViewbutton.Text = "Edit";
+            this.IniViewbutton.Text = "编辑";
             this.IniViewbutton.UseVisualStyleBackColor = true;
             this.IniViewbutton.Click += new System.EventHandler(this.IniViewbutton_Click);
             // 
@@ -101,7 +101,7 @@
             this.intScriptGBox.Size = new System.Drawing.Size(491, 51);
             this.intScriptGBox.TabIndex = 3;
             this.intScriptGBox.TabStop = false;
-            this.intScriptGBox.Text = "AutoCAD startup script file";
+            this.intScriptGBox.Text = "AutoCAD 启动脚本文件";
             // 
             // IniScriptBrowse
             // 
@@ -110,7 +110,7 @@
             this.IniScriptBrowse.Name = "IniScriptBrowse";
             this.IniScriptBrowse.Size = new System.Drawing.Size(53, 25);
             this.IniScriptBrowse.TabIndex = 1;
-            this.IniScriptBrowse.Text = "Browse";
+            this.IniScriptBrowse.Text = "浏览";
             this.IniScriptBrowse.UseVisualStyleBackColor = true;
             this.IniScriptBrowse.Click += new System.EventHandler(this.IniScriptBrowse_Click);
             // 
@@ -130,7 +130,7 @@
             this.OptionOK.Name = "OptionOK";
             this.OptionOK.Size = new System.Drawing.Size(86, 25);
             this.OptionOK.TabIndex = 10;
-            this.OptionOK.Text = "OK";
+            this.OptionOK.Text = "确定";
             this.OptionOK.UseVisualStyleBackColor = true;
             this.OptionOK.Click += new System.EventHandler(this.OptionOK_Click);
             // 
@@ -140,7 +140,7 @@
             this.OptionCancel.Name = "OptionCancel";
             this.OptionCancel.Size = new System.Drawing.Size(86, 25);
             this.OptionCancel.TabIndex = 11;
-            this.OptionCancel.Text = "Cancel";
+            this.OptionCancel.Text = "取消";
             this.OptionCancel.UseVisualStyleBackColor = true;
             this.OptionCancel.Click += new System.EventHandler(this.OptionCancel_Click);
             // 
@@ -153,7 +153,7 @@
             this.groupBox1.Size = new System.Drawing.Size(491, 51);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Process log folder";
+            this.groupBox1.Text = "处理日志文件夹";
             // 
             // logPathBrowse
             // 
@@ -162,7 +162,7 @@
             this.logPathBrowse.Name = "logPathBrowse";
             this.logPathBrowse.Size = new System.Drawing.Size(67, 25);
             this.logPathBrowse.TabIndex = 1;
-            this.logPathBrowse.Text = "Browse";
+            this.logPathBrowse.Text = "浏览";
             this.logPathBrowse.UseVisualStyleBackColor = true;
             this.logPathBrowse.Click += new System.EventHandler(this.logPathBrowse_Click);
             // 
@@ -191,7 +191,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Restart AutoCAD after every ";
+            this.label2.Text = "每处理";
             // 
             // label1
             // 
@@ -200,7 +200,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "drawings (>= 1)";
+            this.label1.Text = "张图纸后重启 AutoCAD（≥ 1）";
             // 
             // searchFolder
             // 
@@ -210,7 +210,7 @@
             this.searchFolder.Name = "searchFolder";
             this.searchFolder.Size = new System.Drawing.Size(218, 17);
             this.searchFolder.TabIndex = 7;
-            this.searchFolder.Text = "Select DWG/DXF files in sub directories ";
+            this.searchFolder.Text = "同时选择子文件夹中的 DWG/DXF 文件";
             this.searchFolder.UseVisualStyleBackColor = true;
             // 
             // groupBox_image
@@ -223,7 +223,7 @@
             this.groupBox_image.Size = new System.Drawing.Size(257, 59);
             this.groupBox_image.TabIndex = 5;
             this.groupBox_image.TabStop = false;
-            this.groupBox_image.Text = "Create image before closing the drawing file";
+            this.groupBox_image.Text = "关闭图纸前创建预览图";
             // 
             // radioButton_none
             // 
@@ -234,7 +234,7 @@
             this.radioButton_none.Size = new System.Drawing.Size(51, 17);
             this.radioButton_none.TabIndex = 2;
             this.radioButton_none.TabStop = true;
-            this.radioButton_none.Text = "None";
+            this.radioButton_none.Text = "不创建";
             this.radioButton_none.UseVisualStyleBackColor = true;
             // 
             // radioButton_failed
@@ -244,7 +244,7 @@
             this.radioButton_failed.Name = "radioButton_failed";
             this.radioButton_failed.Size = new System.Drawing.Size(98, 17);
             this.radioButton_failed.TabIndex = 1;
-            this.radioButton_failed.Text = "Only Failed files";
+            this.radioButton_failed.Text = "仅失败文件";
             this.radioButton_failed.UseVisualStyleBackColor = true;
             // 
             // radioButton_all
@@ -254,7 +254,7 @@
             this.radioButton_all.Name = "radioButton_all";
             this.radioButton_all.Size = new System.Drawing.Size(57, 17);
             this.radioButton_all.TabIndex = 0;
-            this.radioButton_all.Text = "All files";
+            this.radioButton_all.Text = "所有文件";
             this.radioButton_all.UseVisualStyleBackColor = true;
             // 
             // diagnosticMode
@@ -265,7 +265,7 @@
             this.diagnosticMode.Name = "diagnosticMode";
             this.diagnosticMode.Size = new System.Drawing.Size(181, 17);
             this.diagnosticMode.TabIndex = 8;
-            this.diagnosticMode.Text = "Run the tool in diagnostic  mode ";
+            this.diagnosticMode.Text = "以诊断模式运行";
             this.diagnosticMode.UseVisualStyleBackColor = true;
             // 
             // groupBox_exepath
@@ -277,7 +277,7 @@
             this.groupBox_exepath.Size = new System.Drawing.Size(491, 51);
             this.groupBox_exepath.TabIndex = 0;
             this.groupBox_exepath.TabStop = false;
-            this.groupBox_exepath.Text = "AutoCAD application to use";
+            this.groupBox_exepath.Text = "使用的 AutoCAD 程序";
             // 
             // button_exePath
             // 
@@ -286,7 +286,7 @@
             this.button_exePath.Name = "button_exePath";
             this.button_exePath.Size = new System.Drawing.Size(63, 25);
             this.button_exePath.TabIndex = 1;
-            this.button_exePath.Text = "Browse";
+            this.button_exePath.Text = "浏览";
             this.button_exePath.UseVisualStyleBackColor = true;
             this.button_exePath.Click += new System.EventHandler(this.button_exePath_Click);
             // 
@@ -309,7 +309,7 @@
             this.groupBox_speed.Size = new System.Drawing.Size(227, 59);
             this.groupBox_speed.TabIndex = 6;
             this.groupBox_speed.TabStop = false;
-            this.groupBox_speed.Text = "Delay during process (Seconds)";
+            this.groupBox_speed.Text = "处理延时（秒）";
             // 
             // trackBar_speed
             // 
@@ -328,7 +328,7 @@
             this.OpenDWGFile.Name = "OpenDWGFile";
             this.OpenDWGFile.Size = new System.Drawing.Size(217, 17);
             this.OpenDWGFile.TabIndex = 9;
-            this.OpenDWGFile.Text = "Run script without opening drawing file   ";
+            this.OpenDWGFile.Text = "不打开图纸文件直接运行脚本";
             this.OpenDWGFile.UseVisualStyleBackColor = true;
             // 
             // UseExeCheckbox
@@ -338,7 +338,7 @@
             this.UseExeCheckbox.Name = "UseExeCheckbox";
             this.UseExeCheckbox.Size = new System.Drawing.Size(268, 17);
             this.UseExeCheckbox.TabIndex = 12;
-            this.UseExeCheckbox.Text = "Use script as commandline argument for application";
+            this.UseExeCheckbox.Text = "将脚本作为应用程序命令行参数";
             this.UseExeCheckbox.UseVisualStyleBackColor = true;
             this.UseExeCheckbox.Visible = false;
             this.UseExeCheckbox.CheckedChanged += new System.EventHandler(this.UseExeCheckbox_CheckedChanged);
@@ -369,7 +369,7 @@
             this.MinimizeBox = false;
             this.Name = "OptionsDlg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Options";
+            this.Text = "选项";
             this.Load += new System.EventHandler(this.OptionsDlg_Load);
             this.intScriptGBox.ResumeLayout(false);
             this.intScriptGBox.PerformLayout();
