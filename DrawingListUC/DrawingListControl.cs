@@ -297,8 +297,8 @@ namespace DrawingListUC
                 {
                     MessageBox.Show(
                         $"找不到项目文件：\n{strBPLname}\n\n" +
-                        $"Command line: {command}\n\n" +
-                        $"Parsed file: '{strBPLname}'",
+                        $"命令行：{command}\n\n" +
+                        $"解析后的项目文件：'{strBPLname}'",
                         "ScriptPro - 文件未找到",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
