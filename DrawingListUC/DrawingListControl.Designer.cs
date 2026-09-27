@@ -78,17 +78,17 @@
             // 
             // dwgName
             // 
-            dwgName.Text = "Name";
+            dwgName.Text = "名称";
             dwgName.Width = 149;
             // 
             // DwgPath
             // 
-            DwgPath.Text = "Path";
+            DwgPath.Text = "路径";
             DwgPath.Width = 311;
             // 
             // Status
             // 
-            Status.Text = "Status";
+            Status.Text = "状态";
             Status.Width = 61;
             // 
             // DwgContextMenu
@@ -104,41 +104,41 @@
             AddDWG.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { ContextDWGAddFile, ContextDWGAddFolder });
             AddDWG.Name = "AddDWG";
             AddDWG.Size = new System.Drawing.Size(173, 22);
-            AddDWG.Text = "Add";
+            AddDWG.Text = "添加";
             // 
             // ContextDWGAddFile
             // 
             ContextDWGAddFile.Name = "ContextDWGAddFile";
             ContextDWGAddFile.Size = new System.Drawing.Size(107, 22);
-            ContextDWGAddFile.Text = "Files";
+            ContextDWGAddFile.Text = "文件";
             ContextDWGAddFile.Click += ContextDWGAddFile_Click;
             // 
             // ContextDWGAddFolder
             // 
             ContextDWGAddFolder.Name = "ContextDWGAddFolder";
             ContextDWGAddFolder.Size = new System.Drawing.Size(107, 22);
-            ContextDWGAddFolder.Text = "Folder";
+            ContextDWGAddFolder.Text = "文件夹";
             ContextDWGAddFolder.Click += ContextDWGAddFolder_Click;
             // 
             // RemoveDWG
             // 
             RemoveDWG.Name = "RemoveDWG";
             RemoveDWG.Size = new System.Drawing.Size(173, 22);
-            RemoveDWG.Text = "Remove";
+            RemoveDWG.Text = "移除";
             RemoveDWG.Click += RemoveDWG_Click;
             // 
             // SkipDWG
             // 
             SkipDWG.Name = "SkipDWG";
             SkipDWG.Size = new System.Drawing.Size(173, 22);
-            SkipDWG.Text = "Skip";
+            SkipDWG.Text = "跳过";
             SkipDWG.Click += SkipDWG_Click;
             // 
             // chToolStripMenuItem
             // 
             chToolStripMenuItem.Name = "chToolStripMenuItem";
             chToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            chToolStripMenuItem.Text = "Check\\Uncheck all";
+            chToolStripMenuItem.Text = "全部勾选/取消";
             chToolStripMenuItem.Click += chToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
@@ -190,7 +190,7 @@
             // 
             failToolStripMenuItem.Name = "failToolStripMenuItem";
             failToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            failToolStripMenuItem.Text = "Failed";
+            failToolStripMenuItem.Text = "失败";
             failToolStripMenuItem.Click += failToolStripMenuItem_Click;
             // 
             // BPbar
@@ -215,7 +215,7 @@
             scriptGBox.Size = new System.Drawing.Size(671, 58);
             scriptGBox.TabIndex = 9;
             scriptGBox.TabStop = false;
-            scriptGBox.Text = "Script file";
+            scriptGBox.Text = "脚本文件";
             // 
             // Viewbutton
             // 
@@ -225,7 +225,7 @@
             Viewbutton.Name = "Viewbutton";
             Viewbutton.Size = new System.Drawing.Size(84, 28);
             Viewbutton.TabIndex = 2;
-            Viewbutton.Text = "Edit";
+            Viewbutton.Text = "编辑";
             Viewbutton.UseVisualStyleBackColor = false;
             Viewbutton.Click += Viewbutton_Click;
             // 
@@ -237,7 +237,7 @@
             ScriptBrowse.Name = "ScriptBrowse";
             ScriptBrowse.Size = new System.Drawing.Size(74, 28);
             ScriptBrowse.TabIndex = 1;
-            ScriptBrowse.Text = "Browse";
+            ScriptBrowse.Text = "浏览";
             ScriptBrowse.UseVisualStyleBackColor = false;
             ScriptBrowse.Click += ScriptBrowse_Click;
             // 
